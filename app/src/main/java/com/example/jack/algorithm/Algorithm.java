@@ -78,4 +78,34 @@ public class Algorithm {
 
         return 0;
     }
+
+
+    /**
+     * 求出总和最大值跟最小值
+     *
+     * @return
+     */
+    public static int count1() {
+        int[] array = new int[]{10, 21, 213, 421, 8192, 12, 123, 324, 359, 947};
+        int Maxnumber = 100;
+        int MinNumber = 100;
+        int countNumebr = 0;
+        for (int i : array) {
+            countNumebr += i;
+            Log.e("TAG", "countNuumber" + String.valueOf(countNumebr));
+        }
+
+
+        for (int i = 0; i < array.length; i++) {
+            if (Maxnumber < array[i]) {
+                Maxnumber = array[i];
+                Log.e("TAG", "MaxNumber" + String.valueOf(Maxnumber));
+            } else if (MinNumber > array[i]) {
+                MinNumber = array[i];
+                Log.e("TAG", "MinNuumber" + String.valueOf(MinNumber));
+            }
+        }
+
+        return 0;
+    }
 }
